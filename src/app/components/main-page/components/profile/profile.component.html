@@ -1,0 +1,21 @@
+<div *ngIf="!(loading$ | async)">
+  <div class="card-cintainer">
+    <mat-card class="card" *ngIf="profile$ | async as profile">
+      <mat-card-content>
+        <h1>
+          {{ profile?.title }}. {{ profile?.firstName }} {{ profile?.lastName }}
+        </h1>
+        <h2>ID: {{ profile?.id }}</h2>
+        <img src="{{ profile?.picture }}" />
+
+        <div>Gender: {{ profile?.gender }}</div>
+        <div>Date of birth: {{ profile?.dateOfBirth }}</div>
+
+        <div>Register gate: {{ profile?.registerDate }}</div>
+        <div>Email: {{ profile?.email }}</div>
+        <div>Phone: {{ profile?.phone }}</div>
+        <div>Updated date: {{ profile?.updatedDate }}</div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
