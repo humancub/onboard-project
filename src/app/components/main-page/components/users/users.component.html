@@ -1,0 +1,16 @@
+<div *ngIf="!(loading$ | async)">
+  <h2 class="heading">List of users</h2>
+  <div class="cards-container">
+    <mat-card *ngFor="let user of users$ | async" (click)="toProfilePage(user)">
+      <mat-card-content class="card">
+        <img src="{{ user.picture }}" />
+        <div>{{ user.id }}</div>
+        <div>{{ user.email }}</div>
+        <div>{{ user.title }}.{{ user.firstName }} {{ user.lastName }}</div>
+        <button mat-flat-button color="accent" (click)="addToFavorite(user)">
+          Add to Favorite
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
