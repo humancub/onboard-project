@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import {
   AddToFavorite,
   GetUsers,
+  isFavoriteUser,
   IUserState,
   loading,
   users,
@@ -30,6 +31,10 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   public toProfilePage(user: IUser) {
     this.router.navigate([`main-page/profile/${user.id}`]);
+  }
+
+  public isFavoriteUser(id: string): Observable<boolean> {
+    return this.store.select(isFavoriteUser(id));
   }
 
   ngOnInit(): void {

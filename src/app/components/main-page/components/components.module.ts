@@ -7,6 +7,7 @@ import {
   ProfileComponent,
   MainPageRootComponent,
 } from '.';
+import { MainPageSharedModule } from '../shared';
 
 const COMPONENTS = [
   UsersComponent,
@@ -16,7 +17,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [RouterModule, AppSharedModule],
+  imports: [RouterModule, AppSharedModule, MainPageSharedModule],
   declarations: [...COMPONENTS],
   exports: [...COMPONENTS],
 })
