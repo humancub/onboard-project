@@ -1,0 +1,34 @@
+<mat-card class="email-card">
+  <mat-card-title class="email-title">Create new account</mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [formControl]="email" />
+      <mat-error *ngIf="email.touched && email.errors?.required"
+        >Email cannot be empty</mat-error
+      >
+      <mat-error *ngIf="email.errors?.email"
+        >Email must be a valid email address</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [formControl]="password" type="password" />
+      <mat-error *ngIf="password.touched && password.errors?.required"
+        >Password cannot be empty</mat-error
+      >
+    </mat-form-field>
+
+    <div class="button-log">
+      <button
+        mat-button
+        class="btn"
+        (click)="createUser()"
+        [disabled]="password.invalid && email.invalid"
+      >
+        Login
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

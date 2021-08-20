@@ -1,0 +1,65 @@
+.email-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  background: #a1c1e4;
+  height: 350px;
+  width: 350px;
+  border: 1px solid #9cc4f5;
+  border-radius: 13px;
+}
+
+.email-title {
+  text-align: center;
+  padding-top: 40px;
+  height: 60px;
+  font-size: 25px;
+  color: #fdfdfd;
+}
+.button-log {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  line-height: 50px;
+  padding: 0 50px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  width: 400px;
+  outline: none;
+
+  border-radius: 15px;
+  margin-bottom: 15px;
+
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ea5c54 0%,
+    #bb6dec,
+    #23a6d5 100%
+  );
+}
+
+button[disabled] {
+  opacity: 0.5;
+  color: #666666;
+}
+
+button:hover:enabled {
+  background: -webkit-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+}
+
+button[disabled] {
+  opacity: 0.5;
+  color: #666666;
+}
+
+mat-form-field {
+  width: 100%;
+}

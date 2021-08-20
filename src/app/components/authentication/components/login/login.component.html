@@ -1,0 +1,31 @@
+<mat-card class="login">
+  <mat-card-title class="login-title">Login </mat-card-title>
+  <mat-card-content>
+    <div class="button-log">
+      <button
+        mat-raised-button
+        class="button-google"
+        (click)="onSignInGoogle()"
+      >
+        <mat-icon> email</mat-icon>
+        Login with Google
+      </button>
+      <button
+        mat-raised-button
+        class="button-current-email"
+        routerLink="/authentication/email-auth"
+      >
+        <mat-icon> email</mat-icon>
+        Login with current Email
+      </button>
+      <button
+        mat-raised-button
+        class="button-new-email"
+        routerLink="/authentication/create-email"
+      >
+        <mat-icon> email</mat-icon>
+        Create new Account
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

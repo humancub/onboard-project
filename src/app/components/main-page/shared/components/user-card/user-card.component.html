@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-content class="card">
+    <img src="{{ user.picture }}" />
+    <div>{{ user.id }}</div>
+    <div>{{ user.email }}</div>
+    <div>{{ user.title }}.{{ user.firstName }} {{ user.lastName }}</div>
+    <button
+      *ngIf="addToFavoriteAccessible"
+      mat-flat-button
+      color="accent"
+      (click)="addToFavorite()"
+      [disabled]="addToFavoriteDisabled"
+    >
+      Add to Favorite
+    </button>
+  </mat-card-content>
+</mat-card>

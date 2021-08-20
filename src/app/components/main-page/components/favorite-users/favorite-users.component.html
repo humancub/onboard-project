@@ -1,0 +1,13 @@
+<h2 class="heading">Favorite Users</h2>
+
+<div *ngIf="!(loading$ | async)">
+  <div class="cards-container">
+    <ng-container *ngFor="let user of users$ | async">
+      <app-user-card
+        [user]="user"
+        (click)="toProfilePage(user)"
+        [addToFavoriteAccessible]="false"
+      ></app-user-card>
+    </ng-container>
+  </div>
+</div>
